@@ -1,0 +1,31 @@
+@model PartyInviter.Models.Repository
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" I>
+    <title>ListResponses!</title>
+</head>
+<h1>Here is the list of people attending party</h1>
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    @foreach (GuestResponse r in @Repository.Responses)
+    {
+        <tr>
+            <td>@r.Name</td>
+            <td>@r.Email</td>
+            <td>@r.Phone</td>
+        </tr>
+    }
+</table>
+
+</html>
