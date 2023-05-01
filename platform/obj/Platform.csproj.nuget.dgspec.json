@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hasaneke/Development/net/ASP.NET/platform/Platform.csproj": {}
+    "/Users/hasaneke/Development/net/Assignments/platform/Platform.csproj": {}
   },
   "projects": {
-    "/Users/hasaneke/Development/net/ASP.NET/platform/Platform.csproj": {
+    "/Users/hasaneke/Development/net/Assignments/platform/Platform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasaneke/Development/net/ASP.NET/platform/Platform.csproj",
+        "projectUniqueName": "/Users/hasaneke/Development/net/Assignments/platform/Platform.csproj",
         "projectName": "Platform",
-        "projectPath": "/Users/hasaneke/Development/net/ASP.NET/platform/Platform.csproj",
+        "projectPath": "/Users/hasaneke/Development/net/Assignments/platform/Platform.csproj",
         "packagesPath": "/Users/hasaneke/.nuget/packages/",
-        "outputPath": "/Users/hasaneke/Development/net/ASP.NET/platform/obj/",
+        "outputPath": "/Users/hasaneke/Development/net/Assignments/platform/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hasaneke/.nuget/NuGet/NuGet.Config"
