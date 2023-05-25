@@ -7,8 +7,8 @@ var app = builder.Build();
 
 app.UseMiddleware<WeatherMiddleware>();
 
+//DEPENDENCY INJECTIOM
 builder.Services.AddSingleton<IResponseFormatter, TextResponseFormatter>();
-//IResponseFormatter formatter = new TextResponseFormatter();
 
 // SINGLETON
 app.MapGet("middlware/function", async (context) =>
@@ -21,6 +21,7 @@ app.MapGet("endpoint/class", WeatherEndpoint.Endpoint);
 
 app.MapGet("endpoint/function", async context =>
 {
+    // Tightly Coupled
     await TypeBroker.NumberFormatter.Format(context, "It is sunny in LA");
 });
 
