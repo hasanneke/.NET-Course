@@ -13,8 +13,13 @@ builder.Services.AddSingleton<IResponseFormatter, TextResponseFormatter>();
 // SINGLETON
 app.MapGet("middlware/function", async (context) =>
 {
-    await TypeBroker.TextFormatter.Format(context, "It is snowing in Chicago");
-    await TextResponseFormatter.Singleton.Format(context, "It is snowing in Chicago");
+    // Builder Service
+    IResponseFormatter formatter = context.RequestServices.GetRequiredService<IResponseFormatter>();
+    await formatter.Format(context, "Dependency Injection: It is snowing in Chicago");
+    // Tightly Coupled
+    await TypeBroker.TextFormatter.Format(context, "Tightly Coupled: It is snowing in Chicago");
+    // Singleton
+    await TextResponseFormatter.Singleton.Format(context, "Singleton It is snowing in Chicago");
 });
 
 app.MapGet("endpoint/class", WeatherEndpoint.Endpoint);
